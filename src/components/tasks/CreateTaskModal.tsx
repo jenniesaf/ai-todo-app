@@ -40,12 +40,12 @@ export default function CreateTaskModal({ open, onClose }: CreateTaskModalProps)
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-end justify-center sm:items-center">
+    <div className="fixed inset-0 z-[60] flex items-end justify-center sm:items-center">
       <div
         className="absolute inset-0 bg-black/40"
         onClick={onClose}
       />
-      <div className="relative w-full max-w-md rounded-t-3xl bg-white p-6 sm:rounded-3xl">
+      <div className="relative w-full max-w-md rounded-t-3xl bg-white p-6 pb-10 sm:rounded-3xl sm:pb-6">
         <h2 className="mb-4 text-lg font-bold text-gray-900">Create new task</h2>
 
         {error && (

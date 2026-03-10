@@ -29,3 +29,17 @@ body {
 .bg-cta-gradient {
   background: linear-gradient(135deg, #14b8a6 0%, #2dd4a8 100%);
 }
+
+@media (min-width: 640px) {
+  .auth-container {
+    max-width: 420px;
+  }
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+input, button, select {
+  transition: all 0.2s ease;
+}
