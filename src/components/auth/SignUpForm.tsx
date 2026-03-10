@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useAuth } from '@/hooks/useAuth';
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
+import Avatar from '@/components/ui/Avatar';
 
 export default function SignUpForm() {
   const router = useRouter();
@@ -46,13 +47,15 @@ export default function SignUpForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex w-full flex-col gap-4">
-      <h1 className="mb-2 text-center text-2xl font-bold text-white">
+    <form onSubmit={handleSubmit} className="flex w-full flex-col items-center gap-4">
+      <Avatar alt={username || 'U'} size={72} className="mb-2" />
+
+      <h1 className="mb-1 text-center text-2xl font-bold text-white">
         Sign up
       </h1>
 
       {error && (
-        <p className="rounded-lg bg-red-500/20 px-3 py-2 text-center text-sm text-red-100">
+        <p className="w-full rounded-lg bg-red-500/20 px-3 py-2 text-center text-sm text-red-100">
           {error}
         </p>
       )}
@@ -90,7 +93,7 @@ export default function SignUpForm() {
 
       <button
         type="button"
-        className="flex items-center justify-center gap-2 rounded-xl border border-white/30 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10"
+        className="flex w-full items-center justify-center gap-2 rounded-xl border border-white/30 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10"
       >
         <svg width="18" height="18" viewBox="0 0 48 48">
           <path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.9 33.1 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.7-.4-3.9z" />
